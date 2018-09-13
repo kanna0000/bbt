@@ -1,0 +1,27 @@
+= form_for :transactions, url: {action: 'build'} do |f|
+  %ul
+    %li
+      = f.label :version
+      = f.text_field :version, value: '1'
+    %li
+      = f.label :in_count
+      = f.text_field :in_count
+    %li
+      = f.label :prev_hash, 'previous hash'
+      = f.text_field :prev_hash
+    %li
+      = f.label :prev_index, 'previous output index'
+      = f.text_field :prev_index
+    %li
+      = f.label :script
+      = f.text_field :script
+    %li
+      = f.label :sequence
+      = f.text_field :sequence, value: 'ffffffff'
+    %li
+      = f.label :value
+      = f.text_field :value, placeholder: 'in satoshi'
+    %li
+      = f.label :send_to
+      = f.text_field :send_to, value: 'mrEyGtkcLiCc7uwkGZZPABQQhQtme9T7ko', placeholder: 'btc address'
+    = f.submit
