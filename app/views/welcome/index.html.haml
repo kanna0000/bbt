@@ -1,2 +1,16 @@
 %h1 Welcome#index
 %p Find me in app/views/welcome/index.html.erb
+= form_tag '/', method: 'post' do
+  = label_tag 'version'
+  = text_field_tag 'version'
+  = label_tag 'input_count'
+  = text_field_tag 'input_count'
+  = label_tag 'input'
+  -# = text_field_tag 'input'
+  = label_tag 'prev_txid'
+  = text_field_tag 'input[prev_txid]'
+  = label_tag 'output'
+  = text_field_tag 'output'
+  = submit_tag 'submit'
+
+= @data if @data.present?
